@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.mohamed.ayman.recyclerviewapp.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mohamed.ayman.recyclerviewapp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_passwordRecoveryFragment"
+            app:destination="@id/passwordRecoveryFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminCategoryFragment"
+            app:destination="@id/adminCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.mohamed.ayman.recyclerviewapp.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.mohamed.ayman.recyclerviewapp.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorFragment"
+        android:name="com.mohamed.ayman.recyclerviewapp.DoctorFragment"
+        android:label="fragment_doctor"
+        tools:layout="@layout/fragment_doctor" >
+        <action
+            android:id="@+id/action_doctorFragment_to_aboutDoctorFragment3"
+            app:destination="@id/aboutDoctorFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordRecoveryFragment"
+        android:name="com.mohamed.ayman.recyclerviewapp.PasswordRecoveryFragment"
+        android:label="fragment_password_recovery"
+        tools:layout="@layout/fragment_password_recovery" />
+    <fragment
+        android:id="@+id/aboutDoctorFragment3"
+        android:name="com.mohamed.ayman.recyclerviewapp.AboutDoctorFragment"
+        android:label="fragment_about_doctor"
+        tools:layout="@layout/fragment_about_doctor" >
+        <action
+            android:id="@+id/action_aboutDoctorFragment3_to_reservationFragment"
+            app:destination="@id/reservationFragment" />
+        <action
+            android:id="@+id/action_aboutDoctorFragment3_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+        <argument
+            android:name="doctorname"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_aboutDoctorFragment3_self"
+            app:destination="@id/aboutDoctorFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/reservationFragment"
+        android:name="com.mohamed.ayman.recyclerviewapp.ReservationFragment"
+        android:label="fragment_reservation"
+        tools:layout="@layout/fragment_reservation" />
+    <fragment
+        android:id="@+id/adminCategoryFragment"
+        android:name="com.mohamed.ayman.recyclerviewapp.adminCategoryFragment"
+        android:label="fragment_admin_category"
+        tools:layout="@layout/fragment_admin_category" >
+        <action
+            android:id="@+id/action_adminCategoryFragment_to_adminDoctorFragment"
+            app:destination="@id/adminDoctorFragment" />
+        <action
+            android:id="@+id/action_adminCategoryFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminDoctorFragment"
+        android:name="com.mohamed.ayman.recyclerviewapp.adminDoctorFragment"
+        android:label="fragment_admin_doctor"
+        tools:layout="@layout/fragment_admin_doctor" />
+</navigation>

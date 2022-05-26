@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminCategoryFragment">
+
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textSize="@dimen/edit_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/message_edit"
+        app:layout_constraintTop_toBottomOf="@+id/showdata_recycler"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/message_edit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/add_new_specialist"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="@dimen/edit_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showdata_recycler" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/showdata_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
+        app:layout_constraintBottom_toTopOf="@+id/message_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/list_item" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="298dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="310dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/showdata_recycler"
+        app:layout_constraintEnd_toEndOf="@+id/showdata_recycler"
+        app:layout_constraintStart_toStartOf="@+id/showdata_recycler"
+        app:layout_constraintTop_toTopOf="@+id/showdata_recycler" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_button"
+        app:layout_constraintTop_toBottomOf="@+id/showdata_recycler" />
+
+
+    <!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recyclerview"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                tools:itemCount="2"-->
+<!--                tools:listitem="@layout/doctor_category_view" />-->
+
+
+<!--            <EditText-->
+<!--                android:id="@+id/message_edit"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                android:layout_marginTop="35dp"-->
+<!--                android:padding="15dp"-->
+<!--                android:layout_marginEnd="30dp"-->
+<!--                android:background="@drawable/custom_input"-->
+<!--                android:ems="10"-->
+<!--                android:drawablePadding="15dp"-->
+<!--                android:hint="@string/add_new_specialist"-->
+<!--                android:importantForAutofill="no"-->
+<!--                android:inputType="textPersonName"-->
+
+
+<!--                />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/add_button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:text="@string/add"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textSize="25sp"/>-->
+
+<!--&lt;!&ndash;            <Button&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/add_button"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="200dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="@drawable/button_background"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="@string/add"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textSize="25sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:padding="7dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textAllCaps="false"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_gravity="center_horizontal"/>&ndash;&gt;-->
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
+
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:id="@+id/nav_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="start"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        app:headerLayout="@layout/nav_header"-->
+<!--        app:menu="@menu/nav_menu"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
